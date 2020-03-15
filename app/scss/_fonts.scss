@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?5t2hl4");
+  src: url("../fonts/icomoon.eot?5t2hl4#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?5t2hl4") format("truetype"),
+    url("../fonts/icomoon.woff?5t2hl4") format("woff"),
+    url("../fonts/icomoon.svg?5t2hl4#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak-as: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-plus:before {
+    content: "\f067";
+  }
+  .icon-minus:before {
+    content: "\f068";
+  }
+  .icon-envelope-o:before {
+    content: "\f003";
+  }
+  .icon-user:before {
+    content: "\f007";
+  }
+  .icon-lock:before {
+    content: "\f023";
+  }
+  .icon-shopping-cart:before {
+    content: "\f07a";
+  }
+  .icon-phone:before {
+    content: "\f095";
+  }
+  .icon-twitter:before {
+    content: "\f099";
+  }
+  .icon-facebook:before {
+    content: "\f09a";
+  }
+  .icon-facebook-f:before {
+    content: "\f09a";
+  }
+  .icon-pinterest:before {
+    content: "\f0d2";
+  }
+  .icon-google-plus:before {
+    content: "\f0d5";
+  }
+  .icon-linkedin:before {
+    content: "\f0e1";
+  }
+  .icon-comment-o:before {
+    content: "\f0e5";
+  }
+  .icon-angle-left:before {
+    content: "\f104";
+  }
+  .icon-angle-right:before {
+    content: "\f105";
+  }
+  .icon-laptop:before {
+    content: "\f109";
+  }
+  .icon-quote-left:before {
+    content: "\f10d";
+  }
+  .icon-file-text:before {
+    content: "\f15c";
+  }
+  .icon-instagram:before {
+    content: "\f16d";
+  }
+  .icon-long-arrow-left:before {
+    content: "\f177";
+  }
+  .icon-long-arrow-right:before {
+    content: "\f178";
+  }
+  .icon-skype:before {
+    content: "\f17e";
+  }
+  .icon-database:before {
+    content: "\f1c0";
+  }
+  .icon-file-pdf-o:before {
+    content: "\f1c1";
+  }
+  .icon-life-bouy:before {
+    content: "\f1cd";
+  }
+  .icon-life-buoy:before {
+    content: "\f1cd";
+  }
+  .icon-life-ring:before {
+    content: "\f1cd";
+  }
+  .icon-life-saver:before {
+    content: "\f1cd";
+  }
+  .icon-support:before {
+    content: "\f1cd";
+  }
+  .icon-share-alt:before {
+    content: "\f1e0";
+  }
+  .icon-copyright:before {
+    content: "\f1f9";
+  }
+  .icon-ioxhost:before {
+    content: "\f208";
+  }
+  .icon-cart-plus:before {
+    content: "\f217";
+  }
+  .icon-user-plus:before {
+    content: "\f234";
+  }
+  .icon-registered:before {
+    content: "\f25d";
+  }
+  .icon-commenting-o:before {
+    content: "\f27b";
+  }
+  .icon-check:before {
+    content: "\f00c";
+  }
