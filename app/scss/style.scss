@@ -307,6 +307,71 @@
     background-color: #86c724;
   }
 }
-
-
 // end about
+
+// start search
+.search {
+  background-image: url(../img/search/search-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.search__inner {
+  text-align: center;
+  padding: 110px 0;
+  form {
+    button {
+      position: absolute;
+      right: 308px;
+      top: 129px;
+      width: 130px;
+      height: 45px;
+      background: linear-gradient(45deg, #31aae2 0%, #9d35c0 100%);
+      border: none;
+      border-radius: 22.5px;
+      text-transform: uppercase;
+      color: #fff;
+      @include f600;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}
+.searching {
+  position: relative;
+}
+.search__title {
+  display: block;
+  font-size: 30px;
+  @include f700;
+  color: #fff;
+  text-transform: uppercase;
+}
+.search__subtitle {
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  padding-top: 25px;
+  padding-bottom: 45px;
+}
+.search__line {
+  padding-left: 10px;
+  max-width: 571px;
+  width: 100%;
+  height: 60px;
+  border: 1px solid #00aeef;
+  border-radius: 30px;
+  outline: none;
+  &::placeholder {
+    padding-left: 60px;
+    padding-right: 145px;
+    // &::before {
+
+    // }
+  }
+}
+.checkboxes {
+  display: block;
+}
+// end search
