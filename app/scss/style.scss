@@ -20,7 +20,8 @@
 .header__top-contacts {
   a {
     color: #ffffff;
-    margin-left: 80px;
+    margin-right: 80px;
+    margin-left: 30px;
     position: relative;
     font-size: 12px;
     &::before {
@@ -38,7 +39,7 @@
   a {
     display: block;
     text-align: center;
-    color: #00aeef;
+    color: $blue;
     font-size: 12px;
     width: 25px;
     height: 25px;
@@ -53,7 +54,7 @@
     }
     &:hover {
       color: #ffffff;
-      background-color: #00aeef;
+      background-color: $blue;
     }
   }
 }
@@ -77,10 +78,10 @@
     transition: all 0.3s;
     &.active {
       @include f600;
-      color: #00aeef;
+      color: $blue;
     }
     &:hover {
-      color: #00aeef;
+      color: $blue;
     }
   }
 }
@@ -99,7 +100,7 @@
     color: #fff;
     font-size: 12px;
     &:hover {
-      color: #00aeef;
+      color: $blue;
     }
   }
 }
@@ -181,7 +182,7 @@
 .slider__inner-btn {
   @include f600;
   color: #fff;
-  background-color: #00aeef;
+  background-color: $blue;
   font-size: 13px;
   border: 2px solid #fff;
   border-bottom: none;
@@ -210,7 +211,7 @@
     right: 0;
   }
   &:hover {
-    color: #00aeef;
+    color: $blue;
     background-color: rgba(9, 9, 9, 0.102);
   }
 }
@@ -294,7 +295,7 @@
 }
 .about__description-logo.icon-registered {
   &::before {
-    background-color: #00aeef;
+    background-color: $blue;
   }
 }
 .about__description-logo.icon-user {
@@ -334,6 +335,11 @@
       @include f600;
       outline: none;
       cursor: pointer;
+      &:hover {
+        height: 47px;
+        width: 135px;
+        top: 127px;
+      }
     }
   }
 }
@@ -356,22 +362,114 @@
   padding-bottom: 45px;
 }
 .search__line {
-  padding-left: 10px;
+  padding-left: 20px;
+  padding-right: 145px;
   max-width: 571px;
   width: 100%;
   height: 60px;
-  border: 1px solid #00aeef;
+  border: 1px solid $blue;
   border-radius: 30px;
   outline: none;
+  margin-bottom: 30px;
+  &::before {
+    position: absolute;
+    right: -35px;
+  }
+  &:focus {
+    border: 1px solid #850ad6;
+  }
   &::placeholder {
-    padding-left: 60px;
-    padding-right: 145px;
-    // &::before {
-
-    // }
+    padding-left: 20px;
+    line-height: 24px;
   }
 }
 .checkboxes {
   display: block;
+  width: 571px;
+  margin: 0 auto;
+  padding-left: 52px;
+  label {
+    display: inline-block;
+    position: relative;
+    padding-left: 11px;
+    margin-right: 45px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  input[type="checkbox"] {
+    display: none;
+  }
+  label::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: -10px;
+    bottom: 5px;
+    border: 1px solid $blue;
+  }
+  input[type="checkbox"]:checked + label:before {
+    content: "\2713";
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    line-height: 15px;
+  }
 }
 // end search
+
+// start faq
+.faq__inner {
+  padding: 115px 0;
+  text-align: center;
+  &-title {
+    @include f600;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: $text2;
+    padding-bottom: 25px;
+  }
+  p {
+    max-width: 665px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 70px;
+  }
+}
+.faq__items {
+  display: flex;
+  justify-content: space-between;
+}
+.faq__item {
+  width: 300px;
+  &-point {
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 24px;
+    line-height: 25px;
+    color: $blue;
+    border: 2px dotted $blue;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    margin: 0 auto;
+    padding-top: 21px;
+    transition: all 1s;
+  }
+  &:hover .faq__item-point {
+    color: #ffffff;
+    background: linear-gradient(45deg, #31aae2 0%, #9d35c0 100%);
+    border: none;
+  }
+  &-title {
+    @include f600;
+    font-size: 24px;
+    color: $text2;
+    text-transform: uppercase;
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+}
+
+//end faq
