@@ -43,4 +43,10 @@ li {
   margin: 0 auto;
   padding: 0 15px;
 }
-
+.title {
+  @include f600;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: $text2;
+  padding-bottom: 25px;
+}

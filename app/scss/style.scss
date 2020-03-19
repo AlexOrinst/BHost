@@ -424,13 +424,6 @@
 .faq__inner {
   padding: 115px 0;
   text-align: center;
-  &-title {
-    @include f600;
-    text-transform: uppercase;
-    font-size: 30px;
-    color: $text2;
-    padding-bottom: 25px;
-  }
   p {
     max-width: 665px;
     width: 100%;
@@ -441,8 +434,20 @@
 .faq__items {
   display: flex;
   justify-content: space-between;
+  position: relative;
+}
+.dotted-line {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  left: 0;
+  width: 69%;
+  height: 2px;
+  border: none;
+  border-top: 2px dotted #00aeef;
 }
 .faq__item {
+  position: relative;
   width: 300px;
   &-point {
     font-family: "Roboto Slab", sans-serif;
@@ -453,14 +458,18 @@
     border-radius: 50%;
     height: 70px;
     width: 70px;
+    background: #fff;
     margin: 0 auto;
     padding-top: 21px;
-    transition: all 1s;
+    transition: all 0.5s;
+    position: relative;
+    z-index: 1;
   }
   &:hover .faq__item-point {
     color: #ffffff;
     background: linear-gradient(45deg, #31aae2 0%, #9d35c0 100%);
     border: none;
+    font-size: 27px;
   }
   &-title {
     @include f600;
@@ -471,5 +480,189 @@
     padding-bottom: 20px;
   }
 }
-
 //end faq
+
+//start services
+.services {
+  background: #f9f9f9;
+}
+.services__inner {
+  padding: 110px 0 70px;
+  text-align: center;
+  &-text {
+    max-width: 630px;
+    margin: 0 auto;
+  }
+}
+.services__items {
+  display: flex;
+  justify-content: space-between;
+  &-item {
+    width: 290px;
+    text-align: center;
+    padding-left: 20px;
+    color: $text2;
+    & + & {
+      border-left: 2px dotted $blue;
+      margin-left: 20px;
+    }
+    margin-bottom: 100px;
+  }
+}
+.services__item-img {
+  font-size: 60px;
+  background: linear-gradient(45deg, #31aae2 20%, #9d35c0 100%);
+  background-clip: text; /* Обрезаем фон по тексту */
+  -webkit-text-fill-color: transparent; /* Прозрачный текст */
+}
+.services__item-title {
+  @include f600;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 20;
+  text-transform: uppercase;
+  padding: 25px 0 20px;
+}
+//end services
+
+//start pricing
+.pricing__top {
+  padding-top: 110px;
+  text-align: center;
+  margin-bottom: 70px;
+  &-text {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+.pricing__slider-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  position: relative;
+}
+.slider__price-title {
+  @include f600;
+  font-size: 24px;
+  color: $text2;
+  text-transform: uppercase;
+  padding-bottom: 25px;
+}
+.slider__price-text {
+  padding: 25px 0 45px;
+}
+.slider__price-cloud {
+  background-image: url(../img/pricing/cloud.png);
+  color: #ffffff;
+  font-size: 40px;
+  @include f800;
+  display: inline-block;
+  width: 130px;
+  height: 96px;
+  text-align: center;
+  padding-top: 45px;
+}
+.pricing__slider-img {
+  background-position: left;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 340px;
+  margin-left: 90px;
+  margin-top: 30px;
+}
+.slider__price-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider__prise-lists {
+  display: flex;
+  justify-content: space-between;
+}
+.slider__price-list {
+  position: relative;
+  margin-left: 20px;
+  width: 170px;
+  li + li {
+    margin-top: 20px;
+  }
+  .icon-check:before {
+    position: absolute;
+    left: -20px;
+    font-size: 13px;
+    color: #d9d9d9;
+    line-height: 22px;
+  }
+}
+.pricing__slider-btn {
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  @include f600;
+  color: $blue;
+  border: 1px solid $blue;
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: 8px 25px;
+  margin-bottom: 15px;
+  transition: all .8s;
+  &:hover {
+    background: linear-gradient(45deg, #31aae2 20%, #9d35c0 100%);
+    color: #fff;
+  }
+}
+.pricing__slider {
+  position: relative;
+  .slider__arrow-left,
+  .slider__arrow-right {
+    position: absolute;
+    color: $blue;
+    font-size: 20px;
+    top: 150px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all .5s;
+    &:hover {
+      font-size: 40px;
+    }
+  }
+  .slider__arrow-left {
+    left: -95px;
+  }
+  .slider__arrow-right {
+    right: -75px;
+  }
+  .slick-dots {
+    margin-top: 65px;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 120px;
+    button {
+      border: 1px solid $blue;
+      height: 14px;
+      width: 14px;
+      font-size: 0;
+      background-color: transparent;
+      transition: all .3s;
+      &:focus {
+        background-color: $blue;
+        outline: none;
+      }
+      &:hover {
+        height: 18px;
+        width: 18px;
+      }
+    }
+    li {
+      display: inline-block;
+      border: none;
+    }
+    li + li {
+      margin-left: 10px;
+    }
+  }
+}
+
+//end pricing
