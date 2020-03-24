@@ -605,7 +605,7 @@
   text-transform: uppercase;
   padding: 8px 25px;
   margin-bottom: 15px;
-  transition: all .8s;
+  transition: all 0.8s;
   &:hover {
     background: linear-gradient(45deg, #31aae2 20%, #9d35c0 100%);
     color: #fff;
@@ -623,7 +623,7 @@
     outline: none;
     cursor: pointer;
     background-color: transparent;
-    transition: all .5s;
+    transition: all 0.5s;
     &:hover {
       font-size: 40px;
     }
@@ -637,22 +637,24 @@
   .slick-dots {
     margin-top: 65px;
     outline: none;
-    cursor: pointer;
     margin-bottom: 120px;
+    font-size: 0;
+    .slick-active button {
+      background-color: $blue;
+    }
     button {
       border: 1px solid $blue;
       height: 14px;
       width: 14px;
-      font-size: 0;
+      cursor: pointer;
       background-color: transparent;
-      transition: all .3s;
+      transition: all 0.3s;
       &:focus {
         background-color: $blue;
         outline: none;
       }
       &:hover {
-        height: 18px;
-        width: 18px;
+        background-color: $blue;
       }
     }
     li {
@@ -669,7 +671,6 @@
 //start build
 .build__inner {
   display: flex;
-  flex-grow: 50%;
 }
 .build__inner-bg1 {
   background-image: url(../img/build/build-bg1.jpg);
@@ -696,3 +697,63 @@
   color: #fff;
 }
 //end build
+
+//start howto
+.howto__inner {
+  margin-top: 110px;
+  text-align: center;
+  padding-bottom: 70px;
+}
+.tabs {
+  margin: 0 65px;
+  text-transform: uppercase;
+  @include f600;
+  color: $text2;
+  .tab {
+    display: inline-block;
+    background-color: #f9f9f9;
+    border-radius: 2px;
+    width: 169px;
+    height: 59px;
+    text-align: center;
+    padding-top: 15px;
+    cursor: pointer;
+    &.active {
+      background: linear-gradient(45deg, #31aae2 20%, #9d35c0 100%);
+      color: #fff;
+    }
+  }
+  .tab + .tab {
+    margin-left: 1px;
+  }
+}
+.tab__content {
+  padding: 45px 70px 120px 70px;
+}
+.tab-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tab-item__text-subtitle {
+  font-size: 20px;
+  @include f600;
+  line-height: 27px;
+  color: $text2;
+  text-transform: capitalize;
+  padding-bottom: 25px;
+  padding-left: 8px;
+}
+.tab-item__text {
+  padding-right: 45px;
+}
+.tab-item__text-text {
+  padding-left: 8px;
+}
+.tab-item__img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 340px;
+  height: 258px;
+}
+//end howto
